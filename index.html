@@ -8,51 +8,10 @@
    <link href="style.css" rel="stylesheet" type="text/css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 
-  <!-- I deleted all my notes on accident, so now i have to rewrite it. Lesson 27 grid layout shortcut
-
-  We imported the CSS framework from bootstrap. If the columns dont match with the one from bootstrap, check the .CSS file for any naming conflict with the word
-
-  "container." If you do, go back to index.html and comment out replit's  <link>, right after the title tag. 
-
-  Head over back to bootstrap (website) and go utilities, background and copy any 3 colors. !!IMPORTANT!! dont copy the period mentioned. 
-
-  Lets recreate the previous lesson. And add a container to store all the rows and columns. 
-
-  Import the previous lesson elements that made the grid. Wohoo, we made a grid from the previous lesson but imported some framework from bootstrap to make it easier. 
-
-  If we want to make the links horizontal, go back to bootstrap. Go to utilities, then flex. Copy d-flex and paste into the tag "listContainer". We will replace it for d-flex. 
-
-  Now our links are horizontal. The default direction for flex from bootstrap is row. The links look a little cluttered so we can add some padding. Use gap-3, or any number you wish, in the <ul> tag. 
-
-  If you want to get rid of the dots, comment out the container from the .CSS file. And remove the style from the header to remove the greenery. Also, uncomment the replit's CSS by the title tag. 
-
-  Now we want to center these links. Go back to bootstrap and look for justify content in utilities, flex. Copy the one that says center and paste it into the <ul> tag. 
-
-  Update the footer as well with the <ul> tag. 
-
-  We can control how wide we want these columns to be. The bootstrap grid system has a max column limit of 12. Bootstrap automatically sizes them for you. We can also customize it to a certain width too.
-  
-  Under the Layout, grid in bootstrap, in Section "setting one column width". Example: one class is "col-6", meaning we made it wider. We will get that one column, to take up 6/12 of the column spaces. 
-
-  The middle columns have equal width. Say i want the right side column to be thinner than the left side. Go to the "intro" column and put "col-8". Then go to the red column and put change it to "col-4".
-
-  Add those up and it'll equal the total width of the container(page or website). This may look crowded on a phone, so we can turn the red column into a row. We can do this simply by using bootstrap.
-
-  Go back to bootstrap and scroll down a little from the previous section until we hit various width content.
-
-  We can set break points to size the columns differently based on user screen widths with the input col-{breakpoint}-auto or specify the size. Scroll back up to grid options, there is a chart of different screen sizes. 
-
-  Usually we can just use 2 breakpoints. One for small and one for large device. Scroll down to mix and match to see chart example. So when you load into a website, it'll start with 6/12 width (50%), then when the screen shrinks the md(medium) size, the column will then take up 4/12 of the screen. 
-
-  Example of a breakpoint:
-  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
-
-  In our case, we want the "side" column to be a row, so we would put 12 when the screen is considered small, to fill up the page. For the "side" column, in the col tag, put "col-md-8" then space "col-sm-4". Do the same for the first column. 
-  -->
   
 </head>
 <body>
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
       <div class="col bg-secondary">
         Header
@@ -62,7 +21,43 @@
           <li class="listItem"><a href="#">Tiktok</a></li>
         </ul>
       </div>
-    </div>
+    </div> -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
     <div class="row">
       <div class="col-md-8 col-sm-12">
         <div class="row">
